@@ -144,6 +144,15 @@
   .schnote{margin-top:16px;font-size:13px;color:var(--muted);line-height:1.8;text-align:center}
 
   /* AWARDS (sponsor prizes) */
+  /* MAIN PRIZE (headline) */
+  .mainprize{border:1px solid rgba(232,181,74,.45);border-radius:18px;background:linear-gradient(180deg,rgba(232,181,74,.14),rgba(255,46,46,.05) 55%,#15161b);padding:30px 24px 28px;margin:22px 0 4px;text-align:center;box-shadow:0 16px 44px rgba(0,0,0,.42)}
+  .mainprize .mp-k{display:inline-block;font-family:"Noto Sans JP";font-weight:700;font-size:13.5px;color:var(--gold-2);letter-spacing:.06em}
+  .mainprize .mp-t{font-family:"Saira Condensed","Noto Sans JP";font-weight:900;font-size:clamp(34px,8vw,52px);line-height:1;margin-top:8px;letter-spacing:.12em}
+  .mainprize .mp-sub{font-size:14px;color:#eef0f4;margin-top:12px;line-height:1.7}
+  .mainprize .mp-sub b{color:var(--gold-2)}
+  .podium.big{margin-top:22px}
+  .podium.big .amt{font-size:clamp(34px,7.5vw,48px)}
+
   .award{border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,var(--bg-2),#15161b);padding:22px 22px 24px;margin:0}
   .award-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
   .prov-row{display:flex;align-items:center;gap:9px;font-size:12px;color:var(--muted);flex-wrap:wrap}
@@ -157,6 +166,9 @@
   .pic.photo{background:#0c0d10;padding:0;min-height:240px}
   .pic.photo img{width:100%;height:100%;max-height:none;object-fit:cover}
   .pic.dark{background:#0c0d10}
+  .prize.banner{grid-template-columns:1fr}
+  .prize.banner .pic{min-height:0;padding:0;background:#0c0d10}
+  .prize.banner .pic img{width:100%;height:auto;max-height:none;object-fit:contain}
 
   /* CHARITY TEE */
   .tee{margin-top:22px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,var(--bg-2),#15161b);overflow:hidden;display:grid;grid-template-columns:300px 1fr}
@@ -257,11 +269,24 @@
   <section class="sec">
     <h2 class="sec-h"><span class="en">Special Prizes</span> JP-SPORTクラス 特別賞</h2>
     <p class="lead">若手ライダーの挑戦を、協賛各社とレジェンドが応援します。</p>
+
+    <!-- 賞金（メイン・U-25）-->
+    <div class="mainprize">
+      <span class="mp-k">レジェンド達からの 若手ライダー応援</span>
+      <h3 class="mp-t">賞 金</h3>
+      <p class="mp-sub">JP-SPORTクラス 総合順位より、<b>U-25（25歳以下）上位3名</b> へ進呈</p>
+      <div class="podium big">
+        <div class="pcard g1"><div class="rank">1位 ／ 1ST</div><div class="amt">¥100,000</div></div>
+        <div class="pcard g2"><div class="rank">2位 ／ 2ND</div><div class="amt">¥50,000</div></div>
+        <div class="pcard g3"><div class="rank">3位 ／ 3RD</div><div class="amt">¥30,000</div></div>
+      </div>
+    </div>
+
     <div class="prizes">
 
       <!-- ポールポジション賞 -->
-      <article class="prize">
-        <div class="pic photo"><img src="pp-image.jpg" alt="ポールポジション賞"></div>
+      <article class="prize banner">
+        <div class="pic photo"><img src="pp-image.jpg" alt="JP-SPORTSクラス 特別賞 ── ポールポジション賞"></div>
         <div class="body">
           <span class="no">ポールポジション賞</span>
           <h3>予選から、熱い走りを。</h3>
@@ -285,17 +310,6 @@
           <div class="pcard g3"><div class="rank">3位 ／ 3RD</div><div class="amt">¥30,000</div></div>
         </div>
         <div class="meta" style="margin-top:16px">対象 ── 50歳以上のエントラント</div>
-      </article>
-
-      <!-- 参加賞 -->
-      <article class="prize">
-        <div class="pic dark"><img src="prize-noodle.jpg" alt="参加賞 仙台太平楽 袋麺"></div>
-        <div class="body">
-          <span class="no">参加賞</span>
-          <h3>エントラント全員に、袋麺を 🍜</h3>
-          <p>JP-SPORTクラスに参戦するエントラント全員へ、仙台の名店「中華そば 太平楽」の美味しい袋麺をプレゼント。</p>
-          <div class="prov-row">提供：<a class="prov" href="https://www.instagram.com/chuka_soba_taiheiraku/" target="_blank" rel="noopener"><img src="logo-taiheiraku.png" alt="仙台 中華そば 太平楽"></a></div>
-        </div>
       </article>
 
     </div>
@@ -331,6 +345,17 @@
           <p>最近のライダーは足出し走法で、ブーツのソールも消耗品に。ソールを気にすることなく、思いきり走り込んでほしい——そんな想いを込めた賞です。たくさん練習して、もっと速く。</p>
           <div class="meta">対象 ── 総合順位 上位3名</div>
           <div class="src">協賛：<a href="https://www.scoyco-japan.com/" target="_blank" rel="noopener">SCOYCO JAPAN</a></div>
+        </div>
+      </article>
+
+      <!-- 参加賞 -->
+      <article class="prize">
+        <div class="pic dark"><img src="prize-noodle.jpg" alt="参加賞 仙台太平楽 袋麺"></div>
+        <div class="body">
+          <span class="no">参加賞</span>
+          <h3>エントラント全員に、袋麺を 🍜</h3>
+          <p>JP-SPORTクラスに参戦するエントラント全員へ、仙台の名店「中華そば 太平楽」の美味しい袋麺をプレゼント。</p>
+          <div class="prov-row">提供：<a class="prov" href="https://www.instagram.com/chuka_soba_taiheiraku/" target="_blank" rel="noopener"><img src="logo-taiheiraku.png" alt="仙台 中華そば 太平楽"></a></div>
         </div>
       </article>
 
