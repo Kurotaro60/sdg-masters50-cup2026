@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SDGマスターズ50カップ ｜ 全日本筑波大会 JP-SPORTクラス</title>
-<meta name="description" content="全日本ロードレース筑波大会 JP-SPORTクラスで開催。レジェンド5名が賞典外参戦し、U-25の若手ライダーへ賞金・副賞を進呈。来場者向けの予想ゲームも。">
+<meta name="description" content="全日本ロードレース筑波大会 JP-SPORTクラスにレジェンド5名が正式参戦。U-25の若手ライダーへ賞金・副賞を進呈。来場者向けの予想ゲームも。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;700;900&family=Saira:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -71,7 +71,7 @@
   .prize .pic{background:#fff;display:flex;align-items:center;justify-content:center;padding:14px}
   .prize .pic img{width:100%;height:100%;max-height:260px;object-fit:contain;display:block}
   .prize .body{padding:22px 24px}
-  .prize .no{font-family:"Saira Condensed";font-weight:900;font-size:12px;letter-spacing:.12em;color:#1a1500;background:var(--gold);display:inline-block;padding:4px 11px;border-radius:6px}
+  .prize .no,.award .no{font-family:"Saira Condensed","Noto Sans JP";font-weight:900;font-size:13px;letter-spacing:.08em;color:#1a1500;background:var(--gold);display:inline-block;padding:5px 13px;border-radius:7px}
   .prize h3{font-family:"Noto Sans JP";font-weight:900;font-size:21px;margin-top:12px;line-height:1.3}
   .prize p{font-size:14px;color:#cfd3dc;line-height:1.9;margin-top:10px}
   .prize .brands{margin-top:14px;display:flex;flex-direction:column;gap:8px}
@@ -121,8 +121,55 @@
   @media(max-width:680px){.slogos{grid-template-columns:repeat(2,1fr)}}
   .slogo{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-decoration:none;border:1px solid var(--line);border-radius:12px;background:#15171c;padding:22px 14px;transition:.15s;min-height:128px}
   .slogo:hover{border-color:#3a4150;background:#1a1d23;transform:translateY(-2px)}
+  .slogo.white{background:#fff}
+  .slogo.white:hover{background:#f2f2f2}
   .slogo img{max-width:140px;max-height:54px;width:auto;height:auto;object-fit:contain}
   .slogo .cap{font-family:"Saira Condensed";font-weight:700;letter-spacing:.08em;font-size:11px;color:var(--muted);text-transform:uppercase}
+
+  /* SCHEDULE */
+  .sched{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+  @media(max-width:680px){.sched{grid-template-columns:1fr}}
+  .day{border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,var(--bg-2),#15161b);overflow:hidden}
+  .day .dh{font-family:"Noto Sans JP";font-weight:900;font-size:15px;padding:13px 16px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.02)}
+  .day .dh span{color:var(--muted);font-weight:700;font-size:13px}
+  .day ul{list-style:none}
+  .day li{display:flex;align-items:center;gap:14px;padding:11px 16px;border-bottom:1px solid rgba(255,255,255,.05)}
+  .day li:last-child{border-bottom:none}
+  .day li .t{flex:0 0 116px;font-family:"Saira Condensed";font-weight:700;font-size:16px;color:#fff;border-left:3px solid var(--signal);padding-left:12px;letter-spacing:.02em}
+  .day li .e{font-family:"Noto Sans JP";font-size:14px;color:#cfd3dc}
+  .day li.jp{background:rgba(232,181,74,.06)}
+  .day li.jp .t{border-left-color:var(--gold)}
+  .day li.jp .e{color:#fff;font-weight:700}
+  .day li .tag{font-family:"Saira Condensed";font-weight:700;font-size:10px;letter-spacing:.08em;color:#1a1500;background:var(--gold);padding:2px 8px;border-radius:5px;margin-left:auto}
+  .schnote{margin-top:16px;font-size:13px;color:var(--muted);line-height:1.8;text-align:center}
+
+  /* AWARDS (sponsor prizes) */
+  .award{border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,var(--bg-2),#15161b);padding:22px 22px 24px;margin:0}
+  .award-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .prov-row{display:flex;align-items:center;gap:9px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+  .prov img{height:34px;width:auto;border:1px solid var(--line);border-radius:7px;display:inline-block;vertical-align:middle}
+  .amtrow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+  @media(max-width:560px){.amtrow{grid-template-columns:1fr}}
+  .amtbox{border:1px solid var(--line);border-radius:11px;background:#15161b;padding:13px 15px;text-align:center}
+  .amtbox .al{font-size:11.5px;color:#b6bcc8;line-height:1.55;min-height:34px;display:flex;align-items:center;justify-content:center}
+  .amtbox .av{font-family:"Saira Condensed";font-weight:900;font-size:30px;margin-top:6px;color:var(--gold-2)}
+  .prize .body .prov-row{margin-top:16px}
+  .pic.photo{background:#0c0d10;padding:0;min-height:240px}
+  .pic.photo img{width:100%;height:100%;max-height:none;object-fit:cover}
+  .pic.dark{background:#0c0d10}
+
+  /* CHARITY TEE */
+  .tee{margin-top:22px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,var(--bg-2),#15161b);overflow:hidden;display:grid;grid-template-columns:300px 1fr}
+  @media(max-width:680px){.tee{grid-template-columns:1fr}}
+  .tee-pic{display:block;background:#fff}
+  .tee-pic img{width:100%;height:100%;max-height:360px;object-fit:contain;display:block}
+  .tee-body{padding:24px}
+  .tee-body .k{font-family:"Saira Condensed";font-weight:700;letter-spacing:.14em;font-size:11px;text-transform:uppercase;color:var(--gold)}
+  .tee-body h3{font-family:"Noto Sans JP";font-weight:900;font-size:20px;margin-top:8px;line-height:1.35}
+  .tee-body p{font-size:14px;color:#cfd3dc;line-height:1.9;margin-top:12px}
+  .tee-body .spec{font-size:12.5px;color:var(--muted);margin-top:8px}
+  .tee-body .btn{display:inline-block;margin-top:18px;background:var(--signal);color:#fff;font-family:"Noto Sans JP";font-weight:900;font-size:15px;text-decoration:none;padding:13px 28px;border-radius:11px;transition:.15s}
+  .tee-body .btn:hover{background:#ff4848;transform:translateY(-1px)}
 
   footer{margin-top:54px;border-top:1px solid var(--line);padding-top:22px;font-size:11.5px;color:#5e6472;line-height:1.9;text-align:center}
   @media(prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -142,7 +189,7 @@
       <span class="chip"><b>2026.6.21</b> 筑波サーキット</span>
       <span class="chip">全日本ロードレース 第4戦</span>
       <span class="chip"><b>JP-SPORT</b> クラス内で開催</span>
-      <span class="chip">レジェンド5名 <b>賞典外</b>参戦</span>
+      <span class="chip">レジェンド5名 <b>JP-SPORT</b>参戦</span>
     </div>
     <div class="legends">
       <span><b>柳川 明</b> Akira Yanagawa</span>
@@ -157,7 +204,7 @@
   <section class="sec">
     <h2 class="sec-h"><span class="en">About</span> 企画について</h2>
     <p class="lead">
-      全日本ロードレース筑波大会の「JP-SPORTクラス」に、世界選手権や国内トップで活躍したレジェンドライダー5名が <b style="color:#fff">賞典外</b> で特別参戦します。順位を争うためではなく、レースを盛り上げ、未来を担う若手ライダーを本気で応援するための参戦です。
+      全日本ロードレース筑波大会の「JP-SPORTクラス」に、世界選手権や国内トップで活躍したレジェンドライダー5名が <b style="color:#fff">正式参戦</b> します。若手ライダーと同じグリッドで競い合いながらレースを盛り上げ、未来を担う若手を本気で応援するための参戦です。
       レジェンドたちは若手の挑戦を後押しするため、<b style="color:#fff">賞金・副賞</b>、そして来場者みんなで楽しめる<b style="color:#fff">予想ゲーム</b>を用意しました。
     </p>
   </section>
@@ -165,7 +212,7 @@
   <!-- 参加レジェンド -->
   <section class="sec">
     <h2 class="sec-h"><span class="en">The Legends</span> 参加レジェンド</h2>
-    <p class="lead">世界選手権や国内トップシーンを駆け抜けた5名が、賞典外で筑波に集結。</p>
+    <p class="lead">世界選手権や国内トップシーンを駆け抜けた5名が、JP-SPORTクラスに正式参戦。</p>
     <div class="lgrid">
       <article class="lcard">
         <div class="ph"><img src="yanagawa.jpg" alt="柳川 明"></div>
@@ -203,17 +250,54 @@
   <!-- 対象 -->
   <div class="target">
     <span class="tag">対象</span>
-    <p>JP-SPORTクラスに参戦する <b>U-25（25歳以下）</b> ライダー。<b>総合順位の上位3名</b> に、以下の賞金・副賞を進呈します。</p>
+    <p>各賞は <b>JP-SPORTクラスに参戦する選手</b> が対象です。賞ごとに対象・条件が異なります（詳細は各賞をご覧ください）。</p>
   </div>
 
-  <!-- 賞金 -->
+  <!-- 特別賞 -->
   <section class="sec">
-    <h2 class="sec-h"><span class="en">Prize Money</span> 賞金</h2>
-    <p class="lead">若手の頑張りに、レジェンドたちから。JP-SPORTクラス U-25 の総合上位3名へ。</p>
-    <div class="podium">
-      <div class="pcard g1"><div class="rank">1位 ／ 1ST</div><div class="amt">¥100,000</div></div>
-      <div class="pcard g2"><div class="rank">2位 ／ 2ND</div><div class="amt">¥50,000</div></div>
-      <div class="pcard g3"><div class="rank">3位 ／ 3RD</div><div class="amt">¥30,000</div></div>
+    <h2 class="sec-h"><span class="en">Special Prizes</span> JP-SPORTクラス 特別賞</h2>
+    <p class="lead">若手ライダーの挑戦を、協賛各社とレジェンドが応援します。</p>
+    <div class="prizes">
+
+      <!-- ポールポジション賞 -->
+      <article class="prize">
+        <div class="pic photo"><img src="pp-image.jpg" alt="ポールポジション賞"></div>
+        <div class="body">
+          <span class="no">ポールポジション賞</span>
+          <h3>予選から、熱い走りを。</h3>
+          <div class="amtrow">
+            <div class="amtbox"><div class="al">予選ポールポジション獲得ライダー</div><div class="av">¥30,000</div></div>
+            <div class="amtbox"><div class="al">予選通過賞｜P.P獲得者を除く 10代・20代の予選通過ライダー全員</div><div class="av">¥10,000</div></div>
+          </div>
+          <div class="prov-row">提供：<a class="prov" href="https://www.fujimotodenki.jp/" target="_blank" rel="noopener"><img src="logo-fujimoto.png" alt="藤本電機工業"></a></div>
+        </div>
+      </article>
+
+      <!-- ドリームファクトリー50 OVER賞 -->
+      <article class="award">
+        <div class="award-head">
+          <span class="no">ドリームファクトリー50 OVER賞</span>
+          <div class="prov-row">提供：<a class="prov" href="https://eyume.me/" target="_blank" rel="noopener"><img src="logo-yumekojo.png" alt="合同会社 夢工場"></a></div>
+        </div>
+        <div class="podium">
+          <div class="pcard g1"><div class="rank">優勝 ／ WINNER</div><div class="amt">¥100,000</div></div>
+          <div class="pcard g2"><div class="rank">2位 ／ 2ND</div><div class="amt">¥50,000</div></div>
+          <div class="pcard g3"><div class="rank">3位 ／ 3RD</div><div class="amt">¥30,000</div></div>
+        </div>
+        <div class="meta" style="margin-top:16px">対象 ── 50歳以上のエントラント</div>
+      </article>
+
+      <!-- 参加賞 -->
+      <article class="prize">
+        <div class="pic dark"><img src="prize-noodle.jpg" alt="参加賞 仙台太平楽 袋麺"></div>
+        <div class="body">
+          <span class="no">参加賞</span>
+          <h3>エントラント全員に、袋麺を 🍜</h3>
+          <p>JP-SPORTクラスに参戦するエントラント全員へ、仙台の名店「中華そば 太平楽」の美味しい袋麺をプレゼント。</p>
+          <div class="prov-row">提供：<a class="prov" href="https://www.instagram.com/chuka_soba_taiheiraku/" target="_blank" rel="noopener"><img src="logo-taiheiraku.png" alt="仙台 中華そば 太平楽"></a></div>
+        </div>
+      </article>
+
     </div>
   </section>
 
@@ -250,29 +334,6 @@
         </div>
       </article>
 
-      <!-- ▼▼▼ 副賞3（決まったら、この soon カードを上の prize カードと同じ形に差し替えてください）▼▼▼
-      <article class="prize">
-        <div class="pic"><img src="prize-3.jpg" alt="副賞3"></div>
-        <div class="body">
-          <span class="no">副賞 3</span>
-          <h3>（副賞3のタイトル）</h3>
-          <p>（説明文）</p>
-          <div class="meta">対象 ── 総合順位 上位3名</div>
-          <div class="src">協賛：<a href="（URL）" target="_blank" rel="noopener">（協賛社名）</a></div>
-        </div>
-      </article>
-      ▲▲▲ ここまで差し替え用テンプレ ▲▲▲ -->
-
-      <!-- 副賞3（発表前のプレースホルダー） -->
-      <article class="prize soon">
-        <div class="body">
-          <span class="no">副賞 3</span>
-          <div class="csbig">COMING SOON</div>
-          <h3>近日発表</h3>
-          <p>3つ目の副賞は現在準備中です。続報をお楽しみに。</p>
-        </div>
-      </article>
-
     </div>
   </section>
 
@@ -289,6 +350,48 @@
     </div>
   </section>
 
+  <!-- 記念Tシャツ -->
+  <section class="sec">
+    <h2 class="sec-h"><span class="en">Charity Tee</span> レジェンド参戦記念Tシャツ</h2>
+    <div class="tee">
+      <a class="tee-pic" href="https://ridewin.official.ec/items/146746368" target="_blank" rel="noopener"><img src="https://baseec-img-mng.akamaized.net/images/item/origin/f8bce1f35ede771a30b4ade07de08678.png?imformat=generic&amp;q=90&amp;im=Resize,width=800,type=normal" alt="「SDGマスターズ50」レジェンド参戦記念Tシャツ"></a>
+      <div class="tee-body">
+        <span class="k">若手育成応援企画</span>
+        <h3>「SDGマスターズ50」レジェンド参戦記念Tシャツ</h3>
+        <p>人気マンガ家・藤原らんか先生の描き下ろしで、柳川 明・芳賀 紀行・加賀山 就臣の3選手を似顔絵デザインした限定Tシャツ。<b style="color:#fff">売上の一部は、若手ライダーの育成・活動応援費として活用されます。</b></p>
+        <p class="spec">カラー：ホワイト ／ ドライTシャツ ／ サイズ S・M・L・LL</p>
+        <a class="btn" href="https://ridewin.official.ec/items/146746368" target="_blank" rel="noopener">応援企画ページを見る →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- タイムスケジュール -->
+  <section class="sec">
+    <h2 class="sec-h"><span class="en">Schedule</span> タイムスケジュール</h2>
+    <div class="sched">
+      <div class="day">
+        <div class="dh">6.20 <span>(土)</span> ART走行</div>
+        <ul>
+          <li><span class="t">9:20–10:00</span><span class="e">J-GP3 ①</span></li>
+          <li class="jp"><span class="t">10:10–10:30</span><span class="e">JP-SPORT ①</span></li>
+          <li><span class="t">14:05–14:45</span><span class="e">J-GP3 ②</span></li>
+          <li class="jp"><span class="t">14:55–15:15</span><span class="e">JP-SPORT ②</span></li>
+        </ul>
+      </div>
+      <div class="day">
+        <div class="dh">6.21 <span>(日)</span> 公式予選・決勝</div>
+        <ul>
+          <li><span class="t">9:05–9:25</span><span class="e">J-GP3 公式予選</span></li>
+          <li class="jp"><span class="t">9:30–9:45</span><span class="e">JP-SPORT 公式予選</span><span class="tag">レジェンド参戦</span></li>
+          <li><span class="t">11:35–12:10</span><span class="e">ピットウォーク</span></li>
+          <li><span class="t">13:50–</span><span class="e">J-GP3 決勝</span></li>
+          <li class="jp"><span class="t">14:50–</span><span class="e">JP-SPORT 決勝</span><span class="tag">レジェンド参戦</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="schnote">公式タイムスケジュール・最新情報は <a href="https://www.jrr.jp/calendar/tsukuba2026/" target="_blank" rel="noopener">全日本ロードレース選手権 公式サイト（筑波大会）</a> をご確認ください。</p>
+  </section>
+
   <!-- Special Thanks -->
   <section class="sec">
     <div class="thanks">
@@ -303,13 +406,20 @@
           <img src="logo-kabuto.png" alt="OGK Kabuto"><span class="cap">OGK Kabuto</span></a>
         <a class="slogo" href="https://www.scoyco-japan.com/" target="_blank" rel="noopener">
           <img src="logo-scoyco.png" alt="SCOYCO"><span class="cap">SCOYCO</span></a>
+        <a class="slogo" href="https://www.fujimotodenki.jp/" target="_blank" rel="noopener">
+          <img src="logo-fujimoto.png" alt="藤本電機工業"><span class="cap">藤本電機工業</span></a>
+        <a class="slogo white" href="https://eyume.me/" target="_blank" rel="noopener">
+          <img src="logo-yumekojo.png" alt="合同会社 夢工場"><span class="cap" style="color:#333">合同会社 夢工場</span></a>
+        <a class="slogo" href="https://www.instagram.com/chuka_soba_taiheiraku/" target="_blank" rel="noopener">
+          <img src="logo-taiheiraku.png" alt="仙台 中華そば 太平楽"><span class="cap">仙台 太平楽</span></a>
       </div>
     </div>
   </section>
 
   <footer>
-    SDGマスターズ50カップ ／ 全日本ロードレース 第4戦 筑波大会 JP-SPORTクラス内にて開催（2026.6.21）<br>
-    賞金・副賞の対象は JP-SPORTクラス参戦選手のうち U-25（25歳以下）。レジェンド5名は賞典外での参戦です。
+    SDGマスターズ50カップ ／ 全日本ロードレース 第4戦 筑波大会 JP-SPORTクラスにて開催（2026.6.21）<br>
+    レジェンド5名はJP-SPORTクラスに正式参戦。賞金・副賞の対象は、クラス参戦選手のうち U-25（25歳以下）です。<br>
+    大会公式：<a href="https://www.jrr.jp/calendar/tsukuba2026/" target="_blank" rel="noopener">全日本ロードレース選手権 公式サイト（筑波大会）</a>
   </footer>
 </div>
 </body>
